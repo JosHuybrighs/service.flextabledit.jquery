@@ -1,0 +1,196 @@
+/*!
+ * service.table.dialog 1.0.0
+ * http://code.cwwonline.be
+ * MIT licensed
+ *
+ * Created by Jos Huybrighs
+ */
+
+.flexTableContainer {
+  position: relative;
+}
+
+.flexTable tr,
+.flexTable th,
+.flexTable td {
+  position: relative;
+}
+
+.flexTable th,
+.flexTable td {
+  font-size: 0.9em;
+  padding: 0.2em 0.3em 0.2em 0.3em;
+}
+
+.flexTable th input,
+.flexTable td input {
+  width: 100%;
+}
+
+.flexTable th input,
+.flexTable td:first-child {
+  cursor: pointer;
+}
+.flexTable td:first-child:hover {
+  background-color: #008751;
+  background-color: #4c6e65;
+  color: #f0f0f0;
+}
+
+.flexTable th.flxtblColSelected {
+  background-color: #4c6e65;
+  border-top: 1px solid #4c6e65;
+  border-left: 2px solid #4c6e65;
+  border-right: 2px solid #4c6e65;
+}
+.flexTable th.flxtblColMarked {
+  border-top: 2px dotted #4c6e65;
+  border-left: 2px dotted #4c6e65;
+  border-right: 2px dotted #4c6e65;
+}
+.flexTable td.flxtblColSelected,
+.flexTable td.flxtblRowSelected {
+  background-color: #f0f0f0 !important;
+}
+.flexTable td:first-child.flxtblRowSelected {
+  color: #ffffff;
+  background-color: #4c6e65 !important;
+}
+.flexTable td:first-child.flxtblRowSelected {
+  border-left: 2px solid #4c6e65;
+  border-right: 2px solid #4c6e65;
+}
+.flexTable td:first-child.flxtblRowMarked {
+  border-top: none;
+  border-bottom: none;
+  border-right: 2px dotted #4c6e65;
+}
+.flexTable td:last-child.flxtblRowSelected {
+  border-right: 2px solid #4c6e65;
+}
+.flexTable td:last-child.flxtblRowMarked {
+  border-right: 2px dotted #4c6e65;
+}
+.flexTable td.flxtblRowSelected {
+  border-top: 2px solid #4c6e65;
+  border-bottom: 2px solid #4c6e65;
+}
+.flexTable td.flxtblRowMarked {
+  border-top: 2px dotted #4c6e65;
+  border-bottom: 2px dotted #4c6e65;
+  background: #e8eae9
+}
+.flexTable td.flxtblColSelected {
+  border-left: 2px solid #4c6e65;
+  border-right: 2px solid #4c6e65;
+}
+.flexTable td.flxtblColMarked {
+  border-left: 2px dotted #4c6e65;
+  border-right: 2px dotted #4c6e65;
+}
+.flexTable tr:last-child td.flxtblColSelected {
+  border-bottom: 2px solid #4c6e65;
+}
+.flexTable tr:last-child td.flxtblColMarked {
+  border-bottom: 2px dotted #4c6e65;
+}
+.flexTable th.flxtblColSelected input {
+  cursor: text;
+  color: #ffffff;
+}
+.flexTable td.cellSelected {
+  border: 2px solid #008751;
+  border: 2px solid #4c6e65;
+}
+.flexTable td.cellMarked {
+  border: 2px dotted #008751;
+  border: 2px dotted #4c6e65;
+}
+
+.flexTable td span {
+  display: inline-block;
+  margin: 0;
+}
+
+.flexTable input {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+.flexTable thead input {
+  font-weight: bold;
+}
+.flexTable input:focus {
+  outline: 0;
+}
+
+.flexTable .menuPopupBtn {
+  top: 25px;
+  left: 20px;
+	width: 30px;
+	height: 30px;
+  margin: 0px;
+  background: url(menu-h-24x24.png) 2px 2px no-repeat;
+  background-color: #fff;
+  border: 1px solid #858585;
+  border: 1px solid #4c6e65;
+  position: absolute;
+  cursor: pointer;
+}
+
+.flexTableContainer .menuPopup {
+  top: 25px;
+  left: 20px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0 0.833em 0.1em 0.3em;
+  display: table;
+  border: 1px solid #858585;
+  border: 1px solid #4c6e65;
+  position: absolute;
+  cursor: pointer;
+}
+.flexTableContainer .menuPopup .cutMenuAction {
+  background: url(cut-60x60.png) 15px 0px no-repeat;
+}
+.flexTableContainer .menuPopup .copyMenuAction {
+  background: url(copy-60x60.png) 15px 0px no-repeat;
+}
+.flexTableContainer .menuPopup .pasteMenuAction {
+  background: url(paste-60x60.png) 15px 0px no-repeat;
+}
+.flexTableContainer .menuPopup .pasteDisabledMenuAction {
+  background: url(paste-disabled-60x60.png) 15px 0px no-repeat;
+}
+.flexTableContainer .menuPopup .insertColMenuAction {
+  background: url(insert-col-60x60.png) 15px 0px no-repeat;
+}
+.flexTableContainer .menuPopup .deleteColMenuAction {
+  background: url(delete-col-60x60.png) 15px 0px no-repeat;
+}
+.flexTableContainer .menuPopup .deleteColDisabledMenuAction {
+  background: url(delete-col-disabled-60x60.png) 15px 0px no-repeat;
+  cursor: default;
+}
+.flexTableContainer .menuPopup .insertRowMenuAction {
+  background: url(insert-row-60x60.png) 15px 0px no-repeat;
+}
+.flexTableContainer .menuPopup .deleteRowMenuAction {
+  background: url(delete-row-60x60.png) 15px 0px no-repeat;
+}
+.flexTableContainer .menuPopup .deleteRowDisabledMenuAction {
+  background: url(delete-row-disabled-60x60.png) 15px 0px no-repeat;
+  cursor: default;
+}
+
+.flexTableContainer .menuPopup div {
+  float: left;
+  height: 80px;
+  width: 90px;
+  padding-top: 58px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+}
