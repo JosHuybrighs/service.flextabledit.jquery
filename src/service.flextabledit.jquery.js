@@ -1,7 +1,7 @@
 ﻿/****************************************************************************************************** 
  * A jquery plugin implementing an editable table.
  * 
- * version 1.0.0
+ * version 1.0.1
  * 
  * Usage:
  *  - Instantiation (basic):
@@ -35,6 +35,7 @@
  *       ...
  *
  * Version history:
+ *   1.0.1 - Minor error update
  *   1.0.0 - Initial version
  *
  * @requires jQuery 1.8.0 or later
@@ -49,7 +50,7 @@
 
 ; (function ($, win, document, undefined) {
 
-    var version = '1.0.0';
+    var version = '1.0.1';
     var pluginName = 'flextabledit';
     var texts = {
         cut: "Cut",
@@ -559,7 +560,10 @@
                     html += '</span></td>';
                     for (var c = 0; c < this.nrofDataCols; c++) {
                         html += '<td><input type="text" value="';
-                        html += content[r][c];
+                        //                        html += content[r][c];
+                        // Correction to handle table data holding strings with a dquote character in it, like: 'abc"de'
+                        // Thanks to Patrick J. O'Neil
+                        html += (content[r][c] + "").replace(/\"/g, '&quot;');
                         html += '" placeholder="..." /></td>';
                     }
                     html += '</tr>';
